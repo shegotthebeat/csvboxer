@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% block title %}CSV Boxer{% endblock %}
+{% block content %}
+<div class="row mt-5">
+  <div class="col-md-6 offset-md-3">
+    <h1 class="text-center">CSV Boxer</h1>
+    <form id="upload-form" action="/process" method="post" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="file-input" class="form-label">Drag and drop a file or click to select</label>
+        <input type="file" class="form-control" id="file-input" name="file">
+      </div>
+      <div class="mb-3">
+        <label for="script-select" class="form-label">Select a script</label>
+        <select class="form-select" id="script-select" name="script">
+          <option value="sanitize_headers">Sanitize Headers</option>
+          <option value="calculate_stats">Calculate Stats</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Process</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
