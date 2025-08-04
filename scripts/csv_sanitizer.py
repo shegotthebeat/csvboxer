@@ -1,4 +1,3 @@
-
 import csv
 from .base_processor import BaseProcessor
 
